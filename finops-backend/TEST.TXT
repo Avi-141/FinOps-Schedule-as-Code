@@ -1,0 +1,146 @@
+AWS
+Monitor AWS_CE_SVC_1 spending every minute. If AWS_CE_SVC_1 cost is greater than $450, suggest reviewing reserved instance utilization.
+
+Check AWS_CE_SVC_2 costs every minute. If cost is more than 25% above the 7-day average, suggest investigating spot instance usage.
+
+Review AWS_CE_SVC_1 monthly spend every minute. If cost for 'AWS_CE_SVC_1' exceeds $600, recommend AWS cost optimization review.
+
+K8S
+Monitor K8S_POD_1 resource costs every minute. If cost for 'K8S_POD_1' exceeds $70, recommend optimizing pod requests.
+
+Check K8S_POD_2 memory usage every minute. If K8S_POD_2 units are above 5, alert for high resource consumption.
+
+Analyze K8S_POD_1 costs every minute. If cost is more than 30% above the 7-day average, suggest reviewing HPA settings.
+
+Track K8S_POD_2 cluster costs every minute. If cost for 'K8S_POD_2' goes above $45, recommend node optimization.
+
+
+AZURE
+Monitor AZ_VM_1 compute costs every minute. If cost for 'AZ_VM_1' is greater than $250, flag for Azure budget review.
+
+Check AZ_VM_2 storage costs every minute. If cost is more than 20% above the 7-day average, suggest reviewing disk tiers.
+
+Analyze AZ_VM_1 monthly spend every minute. If cost for 'AZ_VM_1' exceeds $300, recommend Azure advisor review.
+
+Track AZ_VM_2 network costs every minute. If cost for 'AZ_VM_2' goes above $180, suggest bandwidth optimization.
+
+
+GCP
+Monitor GCP_INSTANCE_1 compute costs every minute. If cost for 'GCP_INSTANCE_1' goes above $380, suggest looking at GCP sustained usage discounts.
+
+Check GCP_INSTANCE_2 storage costs every minute. If cost is more than 18% above the 7-day average, recommend reviewing storage classes.
+
+Analyze GCP_INSTANCE_1 BigQuery costs every minute. If cost for 'GCP_INSTANCE_1' exceeds $420, suggest query optimization.
+
+Track GCP_INSTANCE_2 networking every minute. If cost for 'GCP_INSTANCE_2' goes above $280, recommend VPC optimization.
+
+
+KIBANA
+Monitor KIBANA_IDX_1 indexing costs every minute. If cost for 'KIBANA_IDX_1' is over $8, recommend reviewing index patterns.
+
+Check KIBANA_IDX_2 search costs every minute. If cost is more than 20% above the 7-day average, suggest optimizing queries.
+
+Analyze KIBANA_IDX_1 storage every minute. If KIBANA_IDX_1 units are above 150, alert for high document count.
+
+Track KIBANA_IDX_2 cluster costs every minute. If cost for 'KIBANA_IDX_2' exceeds $12, recommend shard optimization.
+
+SPLUNK
+Monitor SPLUNK_EVT_1 ingestion costs every minute. If cost for 'SPLUNK_EVT_1' is over $25, recommend reviewing data retention policies.
+
+Check SPLUNK_EVT_2 search costs every minute. If cost is more than 22% above the 7-day average, suggest optimizing search queries.
+
+Analyze SPLUNK_EVT_1 licensing every minute. If SPLUNK_EVT_1 units are above 800, alert for high event volume.
+
+Track SPLUNK_EVT_2 indexing costs every minute. If cost for 'SPLUNK_EVT_2' exceeds $18, recommend data filtering.
+
+SHAREPOINT
+Monitor SP_DOC_1 storage costs every minute. If cost for 'SP_DOC_1' is over $3, recommend reviewing document lifecycle.
+
+Check SP_DOC_2 sync costs every minute. If cost is more than 15% above the 7-day average, suggest optimizing sync frequency.
+
+Analyze SP_DOC_1 API usage every minute. If SP_DOC_1 units are above 75, alert for high document activity.
+
+Track SP_DOC_2 bandwidth costs every minute. If cost for 'SP_DOC_2' exceeds $2.5, recommend content optimization.
+
+
+
+
+Datadog
+Monitor LOG_SRC_1 ingestion costs every minute. If cost for 'LOG_SRC_1' is over $15, recommend checking log verbosity.
+
+Check LOG_SRC_2 retention costs every minute. If cost is more than 25% above the 7-day average, suggest reviewing log retention policies.
+
+Analyze LOG_SRC_1 API usage every minute. If LOG_SRC_1 units are above 15000, alert for high API call volume.
+
+Track LOG_SRC_2 monitoring costs every minute. If cost for 'LOG_SRC_2' exceeds $22, recommend optimizing dashboards.
+
+
+
+Name: "Production Splunk Events"
+Type: Splunk Events & Logs
+(No additional fields needed - uses mock config)
+
+Name: "Production AWS - Finance Team"
+Type: AWS Cost Explorer  
+Account ID: 234567890123
+Region: us-east-1
+
+Name: "Production Kibana Analytics"  
+Type: Kibana Logs & Analytics
+(No additional fields needed - uses mock config)
+
+Name: "Development Azure Subscription"
+Type: Azure Cost Management
+Subscription ID: 87654321-4321-4321-4321-210987654321
+
+Name: "Production K8s Cluster - Engineering"
+Type: Kubernetes Cluster
+Cluster Name: prod-k8s-cluster
+Namespace: finops-monitoring
+
+Monitor S3 spending every minute. If S3 cost is greater than $2.90, please suggest reviewing S3 bucket lifecycle policies
+Check EC2 costs every minute. If cost is more than 20% above the 7-day average, suggest investigating EC2 usage.
+
+
+
+Default
+check EC2 costs every minute. If cost for 'EC2' is more than 20% above the 7-day average, suggest investigating EC2 usage.
+
+AWS Cost explorer
+review AWS_CE_SVC_1 costs every minute. If cost for 'AWS_CE_SVC_1' is above $450, suggest a detailed AWS cost review.
+
+
+K8 Cost testing
+check K8S_POD_1 resource costs every minute. If cost for 'K8S_POD_1' exceeds $70, recommend optimizing pod requests.
+
+K8s Units testing 
+if K8S_POD_1 units are above 2 every minute, alert for high pod count
+
+
+Azure Cost mgmt
+analyze AZ_VM_1 costs every minute. If cost for 'AZ_VM_1' is greater than $250, flag for Azure budget review.
+
+GCP Billing Export 
+inspect GCP_INSTANCE_1 spend every minute. If cost for 'GCP_INSTANCE_1' goes above $380, suggest looking at GCP sustained usage discounts.
+
+Datadog
+check LOG_SRC_1 ingestion costs every minute. If cost for 'LOG_SRC_1' is over $15, recommend checking log verbosity
+
+Splunk
+Monitor SPLUNK_VOL_1 daily ingestion every minute. If cost is more than 15% above the 7-day average, recommend checking data source verbosity.
+Using Splunk mock data, monitor SPLUNK_PROD_1 costs every minute. If cost for 'SPLUNK_PROD_1' is above $150, flag for production cost review.
+
+
+* What to do now (after you take a breath and enjoy this win!):
+* Test Anomaly Detection with a Mock Spike:
+    * The "AWS Cost Explorer " data (from fetch_mock_aws_cost_explorer_data) has a spike for AWS_CE_SVC_1 designed to be around $500+ (e.g., base_cost=200, cost_trend=1.03, spike_day_offset=-3, spike_multiplier=1.8. The third to last day would be day 18 out of 20. Cost after 17 days: 200 * (1.03^17) approx 200 * 1.65 = 330. Spike: 330 * 1.8 = 594).
+    * Your query used "If cost for 'AWS_CE_SVC_1' is above $450". The log showed AWS_CE_SVC_1 cost 234.06. This suggests the latest_entry logic in parse_anomaly_condition might be picking up a non-spiked value from the mock data, or the mock data needs to be adjusted so the very last entry for AWS_CE_SVC_1 is the spike.
+    * Quick check on mock data: The generate_mock_dataframe creates data for service_prefix_1 and service_prefix_2 for each day. The spike is applied to service_prefix_1. So the last entry for AWS_CE_SVC_1 might not be the overall last entry of the DataFrame if AWS_CE_SVC_2 is the very last.
+        * You might want to adjust your parse_anomaly_condition to get the latest entry for the specific current_data (after filtering for service). It seems to be doing that with latest_entry = current_data.iloc[-1].
+        * Double-check the generate_mock_dataframe in executor.py to ensure the spike for AWS_CE_SVC_1 is indeed the latest data point for that service. My generate_mock_dataframe alternates _1 and _2. The latest point overall might be _2.
+        * Try this query to target the spike based on my previous calculation for the AWS mock: For my AWS Cost Explorer mock data, review AWS_CE_SVC_1 costs every minute. If cost for 'AWS_CE_SVC_1' is above $550, suggest a detailed AWS cost review. (The spike for AWS_CE_SVC_1 should be around $594).
+        * Or, you could modify generate_mock_dataframe so that the spike for service_prefix_1 is guaranteed to be one of the absolute latest data points.
+* Test Other Mock Data Sources: Try similar queries for your other mocked sources (K8s, Azure, GCP, Datadog) to ensure the dispatcher calls the correct mock fetch function and that you get distinct results.
+* Frontend Polish (What we started with for "Phase 2"):
+    * Ensure the "Scheduled Checks" table now correctly shows dataSourceName, dataSourceType, and last_run_status (it looks like the GET /api/checks endpoint is being called, so this data should be available to your frontend App.jsx).
+    * Ensure the "System Alerts & Logs" section in the UI correctly displays the "ALERT..." messages that are now being saved to the alerts table in your database
